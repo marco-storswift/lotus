@@ -42,7 +42,7 @@ var walletCmd = &cli.Command{
 var walletNew = &cli.Command{
 	Name:      "new",
 	Usage:     "Generate a new key of the given type",
-	ArgsUsage: "[bls|secp256k1 (default secp256k1)]",
+	ArgsUsage: "[bls|secp256k1|secp256k1-ledger (default secp256k1)]",
 	Action: func(cctx *cli.Context) error {
 		api, closer, err := GetFullNodeAPI(cctx)
 		if err != nil {
